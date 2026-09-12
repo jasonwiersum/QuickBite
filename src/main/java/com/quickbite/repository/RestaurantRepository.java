@@ -1,4 +1,9 @@
 package com.quickbite.repository;
 
-public class RestaurantRepository {
+import com.quickbite.model.Restaurant;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface RestaurantRepository extends JpaRepository<Restaurant, Long> {
 }

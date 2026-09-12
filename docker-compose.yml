@@ -1,0 +1,16 @@
+services:
+
+  postgres:
+    image: postgres:17
+    container_name: quickbite-postgres
+    environment:
+      POSTGRES_DB: quickbite
+      POSTGRES_USER: quickbite
+      POSTGRES_PASSWORD: quickbiteADMIN
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
