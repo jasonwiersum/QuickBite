@@ -1,4 +1,4 @@
-GET http://localhost:8080/api/restaurants
+GET http://localhost:8080/api/restaurants/999
 
 ###
 
@@ -9,4 +9,15 @@ Content-Type: application/json
   "name": "Bratwursthäusle",
   "address": "Nürnberg",
   "cuisine": "Fränkisch"
+}
+
+###
+
+POST http://localhost:8080/api/restaurants
+Content-Type: application/json
+
+{
+  "name": "",
+  "address": "",
+  "cuisine": ""
 }
