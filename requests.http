@@ -1,4 +1,8 @@
-GET http://localhost:8080/api/restaurants/999
+GET http://localhost:8080/api/restaurants/1
+
+###
+
+GET http://localhost:8080/api/restaurants
 
 ###
 
@@ -21,3 +25,18 @@ Content-Type: application/json
   "address": "",
   "cuisine": ""
 }
+
+###
+
+PUT http://localhost:8080/api/restaurants/1
+Content-Type: application/json
+
+{
+  "name": "Bratwursthäusle",
+  "address": "Nürnberg",
+  "cuisine": "Fränkisch"
+}
+
+###
+
+DELETE http://localhost:8080/api/restaurants/1

@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import jakarta.validation.Valid;
 
 import java.util.List;
@@ -49,5 +50,10 @@ public class RestaurantController {
         );
 
         return restaurantService.createRestaurant(restaurant);
+    }
+
+    @DeleteMapping("/api/restaurants/{id}")
+    public void deleteRestaurant(@PathVariable Long id) {
+        restaurantService.deleteRestaurant(id);
     }
 }

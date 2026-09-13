@@ -41,4 +41,12 @@ public class RestaurantService {
     public Restaurant createRestaurant(Restaurant restaurant){
         return restaurantRepository.save(restaurant);
     }
+
+    public void deleteRestaurant(Long id) {
+
+        Restaurant restaurant = restaurantRepository.findById(id)
+                .orElseThrow(() -> new RestaurantNotFoundException(id));
+
+        restaurantRepository.delete(restaurant);
+    }
 }
